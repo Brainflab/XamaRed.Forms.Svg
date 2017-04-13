@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:svg="clr-namespace:XamaRed.Forms.Svg;assembly=XamaRed.Forms.Svg"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamaRed.Forms.Svg.Samples.MainPage">
+
+    <Grid Margin="20" ColumnSpacing="12" RowSpacing="12">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Picker Grid.Row="0" Grid.Column="0" Title="File" x:Name="FilePicker">
+            <!-- Simply using file names as SvgResourceIdsPrefix is set in App.xaml.cs -->
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>svglogo.svg</x:String>
+                    <x:String>inkscape.svg</x:String>
+                    <x:String>tiger.svg</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Picker Grid.Row="0" Grid.Column="1" Title="Stretch mode" x:Name="StretchPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type svg:SvgStretch}">
+                    <svg:SvgStretch>Uniform</svg:SvgStretch>
+                    <svg:SvgStretch>UniformToFill</svg:SvgStretch>
+                    <svg:SvgStretch>Fill</svg:SvgStretch>
+                    <svg:SvgStretch>None</svg:SvgStretch>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Picker Grid.Row="1" Grid.Column="0" Title="Horizontal alignment" x:Name="HorizontalAlignmentPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type svg:SvgAlignment}">
+                    <svg:SvgAlignment>Start</svg:SvgAlignment>
+                    <svg:SvgAlignment>Middle</svg:SvgAlignment>
+                    <svg:SvgAlignment>End</svg:SvgAlignment>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Picker Grid.Row="1" Grid.Column="1" Title="Vertical alignment" x:Name="VerticalAlignmentPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type svg:SvgAlignment}">
+                    <svg:SvgAlignment>Start</svg:SvgAlignment>
+                    <svg:SvgAlignment>Middle</svg:SvgAlignment>
+                    <svg:SvgAlignment>End</svg:SvgAlignment>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <svg:SvgView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#44000000"
+                     ResourceId="{Binding SelectedItem, Source={x:Reference FilePicker}}"
+                     Stretch="{Binding SelectedItem, Source={x:Reference StretchPicker}}"
+                     HorizontalAligment="{Binding SelectedItem, Source={x:Reference HorizontalAlignmentPicker}}"
+                     VerticalAligment="{Binding SelectedItem, Source={x:Reference VerticalAlignmentPicker}}" />
+
+    </Grid>
+
+
+
+</ContentPage>

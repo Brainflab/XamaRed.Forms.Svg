@@ -12,14 +12,18 @@ This control is available as a Nuget package : `XamaRed.Forms.Svg`.
 - SVG files must be located in a PCL assembly, with `Embedded Resource` build action.
 - The [resource identifier](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/files/#Loading_Files_Embedded_as_Resources) of the file must be provided.
 
+Namespace declaration :
+```xml
+xmlns:svg="clr-namespace:XamaRed.Forms.Svg;assembly=XamaRed.Forms.Svg"
+```
 Simple image display :
-````xml
+```xml
 <svg:SvgView ResourceId="MyProject.Assets.myfile.svg" />
-````
+```
 Image display with custom stretch mode and alignment :
-````xml
+```xml
 <svg:SvgView ResourceId="MyProject.Assets.myfile.svg" VerticalAligment="Middle" HorizontalAligment="Middle" Stretch="UniformToFill" />
-````
+```
 ## About stretch mode and alignment
 The stretch modes are the same as in WPF :
 - `Uniform` : uniform stretch the SVG as much as possible while keeping the SVG fully visible
@@ -50,9 +54,9 @@ In order to simplify the resource identifiers, it is also possible to set a defa
 SvgView.ResourceIdsPrefix = "XamaRed.Forms.Svg.Tests.Assets.";
 SvgView.MainPclAssembly = typeof(EnsurePictureTests).Assembly;
 ```
-````xml
+```xml
 <svg:SvgView ResourceId="inkscape.svg" />
-````
+```
 
 ## Limitations
 The SVG support of Skia is currently limited to basic features.

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SkiaSharp;
+using SKSvg = SkiaSharp.Extended.Svg.SKSvg;
 
 namespace XamaRed.Forms.Svg.Tests
 {

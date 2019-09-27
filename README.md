@@ -61,3 +61,6 @@ SvgView.MainPclAssembly = typeof(EnsurePictureTests).Assembly;
 ## Limitations
 The SVG support of Skia is currently limited to basic features.
 Advanced SVG files may not render correctly.
+
+## Update notes
+v1.1.0 : Added .NET Standard 2.0 support (and requirement)

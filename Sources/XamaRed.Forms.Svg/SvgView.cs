@@ -5,6 +5,7 @@ using System.Reflection;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
+using SKSvg = SkiaSharp.Extended.Svg.SKSvg;
 
 namespace XamaRed.Forms.Svg
 {

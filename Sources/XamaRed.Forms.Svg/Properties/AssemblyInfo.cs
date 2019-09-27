@@ -7,9 +7,9 @@ using System.Reflection;
 [assembly: AssemblyTitle("XamaRed.Forms.Svg")]
 [assembly: AssemblyDescription("SVG viewer control for Xamarin Forms, based on SkiaSharp")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Rémi Eynard")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("XamaRed.Forms.Svg")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCopyright("Rémi Eynard")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]
@@ -24,5 +24,5 @@ using System.Reflection;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
+//[assembly: AssemblyVersion("1.0.1.0")]
+//[assembly: AssemblyFileVersion("1.0.1.0")]
